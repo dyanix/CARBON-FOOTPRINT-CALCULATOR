@@ -1,0 +1,403 @@
+/* 
+font-size:
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+font-weight:
+
+line-height:
+1.8
+
+---Spacing
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+---Colors
+#395E66
+#387D7A
+#32936F
+#26A96C
+#2BC016
+#042d56
+#FAF9F6
+ */
+
+/* Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 100- 16 62.5-10 50-8*/
+
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #042d56;
+  font-family: Rubik, sans-serif;
+}
+
+/* -------------------------------------------- */
+/* HERO SECTION - NAVBAR */
+.hero-bg {
+  height: 100vh;
+  background-image: url("../bgimg/bgimg.jpeg ");
+  
+ 
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navi {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 2.4rem;
+}
+
+.header-navi-list {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.logo {
+  margin: 2.4rem;
+  width: 25rem;
+}
+
+.header-navi-link:link,
+.header-navi-link:visited {
+  text-decoration: none;
+  color: #2bc016;
+}
+
+.header-navi-link:hover,
+.header-navi-link:active {
+  color: #042d56;
+  transition: all 0.3s;
+}
+
+/* ------------------------------------------------------------------ */
+/* HERO SECTION - Home Page */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+
+  height: 80vh;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 3.6rem;
+}
+
+.hero-description {
+  font-size: 1.8rem;
+  margin: 0 32rem 0 32rem;
+
+  line-height: 1.4;
+}
+
+.cta-para {
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  margin: 8rem 0 0 0;
+}
+
+/* -------------------------------------------- */
+/* HOWITWORKS SECTION */
+.howitworks-section {
+  padding: 9.6rem 0 12.8rem 0;
+}
+
+/* Headings */
+.howitworks-section-heading {
+  font-size: 4.4rem;
+
+  margin-bottom: 9.6rem;
+  letter-spacing: 1px;
+  text-align: center;
+
+  color: #042d56;
+}
+
+.subheading {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  /* margin-bottom: 1rem; */
+  text-align: center;
+  color: #5cdb95;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+}
+
+/* Image Background Circles */
+.steps-img-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  padding-bottom: 70%;
+  background-color: #6bd35c;
+  z-index: -2;
+}
+
+.steps-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.steps-img {
+  max-width: 90%;
+  transition: all 0.4s;
+  border-radius: 12px;
+}
+
+.steps-img:hover {
+  transform: scale(1.06);
+}
+
+.howitworks-intro {
+  margin-bottom: 4.8rem;
+}
+
+.steps-text-box {
+  align-self: center;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #bbefcf;
+  margin-bottom: 2.4rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+/* Grid Implementation */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ------------------------------------------------------------------ */
+/* Sector Contri SECTION */
+
+.sectors-contri-section {
+  padding: 12.8rem 9.6rem;
+
+  background-color: #faf9f6;
+}
+
+.contri-section-heading {
+  font-size: 4.4rem;
+
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+
+  color: #042d56;
+}
+
+.contri-section-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  background-image: url("../bgimg/trial.jpeg");
+  
+  background-size: cover;
+
+  height: 65rem;
+
+  margin-bottom: 8rem;
+}
+
+.contri-section-para {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+
+  color: #faf9f6;
+
+  padding: 0 80rem 0 4.4rem;
+}
+
+.containerify {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pie-chart {
+  width: 55rem;
+}
+
+.section-chart-para {
+  font-weight: 400;
+  font-size: 2rem;
+
+  width: 80rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* India Emissions Study SECTION */
+
+.india-study-section {
+  padding: 12.8rem 9.6rem 6.4rem 9.6rem;
+
+  background-image: url("/bgimg/sectors-contri.jpeg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.35);
+  background-size: cover;
+
+  /* background-color: #faf9f6; */
+}
+
+.india-section-heading {
+  font-size: 4.4rem;
+
+  margin-bottom: 8rem;
+  letter-spacing: 1px;
+  text-align: center;
+
+  color: #042d56;
+}
+
+.india-section-para {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  /* text-align: center; */
+
+  color: #fcf2e0;
+}
+
+.bar-chart {
+  margin: 3.2rem 9.6rem;
+}
+
+/* -------------------------------------------- */
+/* Buttons */
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+
+  display: inline-block;
+  padding: 1.6rem;
+}
+
+.btn-info:link,
+.btn-info:visited {
+  font-weight: 500;
+}
+
+.btn-cta:link,
+.btn-cta:visited {
+  background-color: #2bc016;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.4s;
+}
+
+.btn-cta:active,
+.btn-cta:hover {
+  background-color: #042d56;
+}
+
+/* ------------------------------------------------------------------ */
+/* Conclusion SECTION */
+.conclusion-section {
+  padding: 12.8rem 12.8rem 6.4rem 12.8rem;
+  background-color: #faf9f6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+.conclusion-section-para {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.conclusion-img {
+  width: 100rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* UTIL CLASSES */
+.greenify {
+  color: #2bc016;
+  font-weight: 700;
+}
+
+/* -------------------------------------------- */
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #68819a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #042d56;
+  border-radius: 100vw;
+
+  transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #365778;
+}

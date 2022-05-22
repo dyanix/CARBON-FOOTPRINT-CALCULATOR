@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Footprint</title>
+    <link rel="stylesheet" href="cf.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://imgs.search.brave.com/GEcIpS5Lv-dkZ8_DraVSbo-A7C85weiiHOkBlFqGbCs/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzU2/ZjlkYmI2OGE2NWUy/OTBiYjI4NTA2Zi8x/NTYyMTc0Njc4MjU2/LUg4Q1pDSDBKV0JB/WUU2WElMUFFJL2tl/MTdad2RHQlRvZGRJ/OHBEbTQ4a05pRU04/OG1yekhSc2QxbVEz/YnhWY3Q3Z1FhM0g3/OEgzWTB0eGphaXZf/MGZEb092eGNkTW1N/S2tEc3lVcU1Tc01X/eEhrNzI1eWlpSEND/TGZyaDhPMXo0WVR6/SHZuS2h5cDZEYS1O/WXJvT1czWkdqb0JL/eTNhenFrdTgwQzc4/OWwwczBYYU1OakNx/QXpSaWJqbkVfd0Js/a1oyYXh2TWxQZnFG/TFd5LTNUanA0bktT/Y0NIZzFYRjRhTHNR/SmxvNm9ZYkEvcmVk/dWNlK2NhcmJvbitm/b290cHJpbnQrd2l0/aCtUaGUrQ2hpY2Fn/bytHcmVlbmJveC5q/cGc"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Form -->
+    <div class="container" id="xyz">
+      <form
+        name="myForm"
+        action="/action.php"
+        onsubmit="return f1()"
+        method="post"
+        class="myForm"
+      >
+        <h2><i class="fa-solid fa-arrow-right-long"></i> Enter Your Name</h2>
+        <div class="wrapper">
+          <div class="input-data">
+            <input id="input-name" type="text" name="fname" required />
+            <div class="underline"></div>
+            <label>Name</label>
+          </div>
+        </div>
+        <br />
+
+        <br />
+        <h2>
+          <i class="fa-solid fa-arrow-right-long"></i> How many people live in
+          your household?
+        </h2>
+        <div class="slidecontainer">
+          <input
+            value="1"
+            type="range"
+            min="1"
+            max="12"
+            name="fmember"
+            class="slider"
+            id="myRange"
+            required
+          />
+          <p class="value-output">Value: <span id="Member-output"></span></p>
+        </div>
+        <br />
+        <h2>
+          <i class="fa-solid fa-arrow-right-long"></i> Electricity Usage Per
+          Month [In Units]
+        </h2>
+        <div class="slidecontainer">
+          <input
+            value="0"
+            type="range"
+            min="0"
+            max="200"
+            name="felectricity"
+            class="slider1"
+            id="myRange"
+            required
+          />
+          <p class="value-output">
+            Value: <span id="Electricity-output"></span>
+          </p>
+        </div>
+        <br />
+        <h2>
+          <i class="fa-solid fa-arrow-right-long"></i> LPG(Cylinder) Usage Per
+          Month
+        </h2>
+        <div class="slidecontainer">
+          <input
+            value="0"
+            type="range"
+            min="0"
+            max="5"
+            class="slider2"
+            name="fcylinder"
+            id="myRange"
+            required
+          />
+          <p class="value-output">Value: <span id="Cylinder-output"></span></p>
+        </div>
+        <br />
+        <h2>
+          <i class="fa-solid fa-arrow-right-long"></i> Which Type Of Fuel Does
+          Your Vehicle Use ??
+        </h2>
+        <div class="radio-group">
+          <label class="radio">
+            <input id="petrol-radio" type="radio" value="Petrol" name="Fuel" />
+            Petrol
+            <span></span>
+          </label>
+          <label class="radio">
+            <input id="diesel-radio" type="radio" value="Diesel" name="Fuel" />
+            Diesel
+            <span></span>
+          </label>
+        </div>
+        <br />
+        <h2>
+          <i class="fa-solid fa-arrow-right-long"></i> Petrol/Diesel Consumption
+          per Month [In Litres]
+        </h2>
+        <div class="wrapper">
+          <div class="input-data">
+            <input min="0" type="number" name="ffuel" required />
+            <div class="underline"></div>
+            <label>Consumption</label>
+          </div>
+        </div>
+        <br />
+
+        <button class="button" onclick="f1()">
+          <i class="fa-solid fa-bookmark"></i> Submit
+        </button>
+
+        <input class="button1" type="reset" onclick="f2()" value="Reset" />
+      </form>
+    </div>
+
+    <!-- Results -->
+    <div class="container1" id="result-container">
+      <div id="output">Your Carbon Footprint</div>
+      <br />
+      <div id="output2">...</div>
+    </div>
+  </body>
+  <script src="cf.js"></script>
+</html>
